@@ -14,7 +14,7 @@ alias goLD="cd $CMP; cd ../localdev; ld;"
 alias updateLDdep="goLD cd nc-docker; sudo pip install -e ."
 alias dsk="cd ~/Desktop/";
 alias ncd='gocmp  nc-docker'
-alias du="ld; nc-docker up  sso assets publishing-service channel-service analytics-api redis rabbitmq mongo mysql marketing-work-request article-query article-query-record-processors sqs pitchmanager --local marketingplatform"
+alias du="ld; nc-docker up  sso assets publishing-service channel-service analytics-api redis rabbitmq mongo mysql marketing-work-request article-query article-query-record-processors sqs pitchmanager localstack --local marketingplatform"
 alias cmpu="cmp; yarn --ignore-engines; node --max_old_space_size=2048 $(which grunt);"
 alias cmp="cd $CMP && ld  && du && yarn start"
 alias ll="ls -lhaG"

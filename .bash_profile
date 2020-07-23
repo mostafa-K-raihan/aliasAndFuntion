@@ -74,6 +74,7 @@ _spro() {
   cd ~/Desktop/aliasAndFunction 
   echo 'moved to git folder'
   git add . && git ci -m "updated at - `date`" && git ps;
+  echo "push done"
 }
 
 alias spro=_spro

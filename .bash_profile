@@ -65,5 +65,15 @@ alias gitPull=_gitPull
 
 
 _spro() {
-
+  source $HOME/.bash_profile
+  echo 'Sourcing done'
+  rm -r ~/Desktop/aliasAndFunction/.bash_profile 
+  echo 'removing done'
+  cp ~/.bash_profile ~/Desktop/aliasAndFunction/.bash_profile
+  echo 'copying done'
+  cd ~/Desktop/aliasAndFunction 
+  echo 'moved to git folder'
+  git add . && git ci -m "updated at - ${date}" && git ps;
 }
+
+alias spro=_spro

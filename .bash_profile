@@ -3,7 +3,7 @@ source ~/.bashrc
 source ~/.custom.sh
 alias ld="pyenv activate localdev"
 alias amend="git add . && git ci --amend --no-edit"
-alias amendRebase="amend && git rb --coninue && git ps"
+alias amendRebase="amend && git rb --continue && git ps"
 alias rbcont="git add . && git ci --no-edit && git rb --continue"
 export NVM_DIR="$HOME/.nvm"
 export CMP="$HOME/Desktop/projects/marketingplatform/"

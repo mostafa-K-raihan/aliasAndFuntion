@@ -79,3 +79,14 @@ _spro() {
 }
 
 alias spro=_spro
+
+_quickRebase() {
+  echo 'moving to master and pull latest'
+  gpm
+  echo 'moving to current branch'
+  git co "$1"
+  echo 'rebase'
+  git rb master
+}
+
+alias quickRebase=_quickRebase

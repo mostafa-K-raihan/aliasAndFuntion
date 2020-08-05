@@ -37,7 +37,7 @@ alias spro='source $HOME/.bash_profile'
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 export PATH="$PATH:$HOME/Desktop/flutter/bin"
 alias cleanIndices='nc-docker exec article-query "./ncbuild clean_indices"'
-alias publishSeed='nc-docker exec analytics-api ""/code/docker/run-data-seed.sh"'
+alias publishSeed='nc-docker exec analytics-api "/code/docker/run-data-seed.sh"'
 export PATH="$PATH:$HOME/Desktop/mongodb-osx-x86_64-3.6.17/bin"
 export PS1="\W ξ "
 _nc_docker_completion() {

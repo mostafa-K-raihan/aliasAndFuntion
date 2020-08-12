@@ -60,7 +60,7 @@ alias mkcd=_mkcd
 
 _fetchCo() {
   IN="$1"
-  arrIN=(${IN//;/ })
+  arrIN=(${IN//:/ })
   git fetch ${arrIN[0]} ${arrIN[1]} && git co ${arrIN[1]}
 }
 alias fetchCo=_fetchCo

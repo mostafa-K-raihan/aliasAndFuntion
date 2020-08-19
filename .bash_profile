@@ -36,7 +36,7 @@ alias pro='vi $HOME/.bash_profile'
 alias spro='source $HOME/.bash_profile'
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 export PATH="$PATH:$HOME/Desktop/flutter/bin"
-alias cleanIndices='nc-docker exec article-query "./ncbuild clean_indices"'
+alias cleanIndices='nc-docker exec article-query "./ncbuild clean_indices" && cd $CMP && yarn reindex-data'
 alias publishSeed='nc-docker exec analytics-api "/code/docker/run-data-seed.sh"'
 export PATH="$PATH:$HOME/Desktop/mongodb-osx-x86_64-3.6.17/bin"
 export PS1="\W ξ "
@@ -64,6 +64,18 @@ _fetchCo() {
   git fetch ${arrIN[0]} ${arrIN[1]} && git co ${arrIN[1]}
 }
 alias fetchCo=_fetchCo
+
+_crbr() {
+  echo 'stash everything'
+  git stash
+  echo 'move to master and pull latest'
+  gpm
+  echo 'creating brach'
+  git co -b "$1"
+  echo 'done'
+}
+alias crbr=_crbr
+
 
 _gitPull() {
   cd $CMP && cd ../ 

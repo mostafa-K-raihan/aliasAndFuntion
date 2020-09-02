@@ -11,6 +11,7 @@ export CMP="$HOME/Desktop/projects/marketingplatform/"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias celery_worker='celery worker --app assets.worker.app:app --loglevel DEBUG --queue extract_zip_and_update_task'
+alias run_script='node --require ts-node/register/transpile-only '
 alias gocmp="cd $CMP; ld;"
 alias goLD="cd $CMP; cd ../localdev; ld;"
 alias updateLDdep="goLD cd nc-docker; sudo pip install -e ."

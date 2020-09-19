@@ -53,7 +53,7 @@ force_color_prompt=yes
 export LC_ALL=en_US.UTF-8
 alias pullAll='nc-docker pull assets analytics-api sso channel-service article-query article-query-record-processors rabbitmq redis mongo mysql file-server sqs file-server-internal marketingplatform'
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
-export PATH="~/Desktop/dart-sass/src/$PATH"
+export PATH="~/Desktop/dart-sass/:$PATH"
 
 _mkcd() {
   mkdir -p "$1" && cd "$1"

@@ -34,7 +34,7 @@ alias tl="cd $CMP && ld; yarn run lint --fix"
 alias gpm="git checkout master; git pull newscred master"
 alias gco='git checkout'
 alias pro='vi $HOME/.bash_profile'
-alias spro='source $HOME/.bash_profile'
+alias source_profile='source $HOME/.bash_profile'
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 export PATH="$PATH:$HOME/Desktop/flutter/bin"
 alias cleanIndices='nc-docker exec article-query "./ncbuild clean_indices" && cd $CMP && yarn reindex-data'
@@ -89,6 +89,7 @@ alias gitPull=_gitPull
 
 
 _spro() {
+  currentDir = $(pwd)
   source $HOME/.bash_profile
   echo 'Sourcing done'
   rm -r ~/Desktop/aliasAndFunction/.bash_profile 
@@ -99,7 +100,10 @@ _spro() {
   echo 'moved to git folder'
   git add . && git ci -m "updated at - `date`" && git ps;
   echo "push done"
-  gocmp
+  echo 'sourcing bash profile'
+  source_profile
+  echo 'moving to current directory'
+  cd $(currentDir)
 }
 
 alias spro=_spro

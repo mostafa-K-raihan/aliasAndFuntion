@@ -104,7 +104,7 @@ _spro() {
   echo 'sourcing bash profile'
   source_profile
   echo 'moving to current directory'
-  cd $(currentDir)
+  cd currentDir
 }
 
 alias spro=_spro

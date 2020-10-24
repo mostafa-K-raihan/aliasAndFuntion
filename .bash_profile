@@ -2,6 +2,7 @@
 source `which virtualenvwrapper.sh`
 source ~/.bashrc
 source ~/.custom.sh
+alias dc="docker"
 alias ld="pyenv activate localdev"
 alias amend="git add . && git ci --amend --no-edit"
 alias amendRb="amend && git rb --continue"

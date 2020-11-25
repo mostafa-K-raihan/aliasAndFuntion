@@ -93,7 +93,7 @@ alias gitPull=_gitPull
 
 
 _spro() {
-  currentDir = $(pwd)
+  currentDir=$(pwd)
   source $HOME/.bash_profile
   echo 'Sourcing done'
   rm -r ~/Desktop/aliasAndFunction/.bash_profile 

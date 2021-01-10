@@ -9,7 +9,7 @@ alias amendRb="amend && git rb --continue"
 alias amendRbPs="amendRb && git ps"
 alias rbcont="git add . && git ci --no-edit && git rb --continue"
 export NVM_DIR="$HOME/.nvm"
-export CMP="$HOME/Desktop/projects/marketingplatform/"
+export CMP="$HOME/Desktop/projects/cmp-client"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias celery_worker='celery worker --app assets.worker.app:app --loglevel DEBUG --queue extract_zip_and_update_task'
@@ -45,7 +45,7 @@ export PATH="$PATH:$HOME/Desktop/flutter/bin"
 alias cleanIndices='nc-docker exec article-query "./ncbuild clean_indices" && cd $CMP && yarn reindex-data'
 alias publishSeed='nc-docker exec analytics-api "/code/docker/run-data-seed.sh"'
 export PATH="$PATH:$HOME/Desktop/mongodb-osx-x86_64-3.6.17/bin"
-export PS1="\W ξ "
+export PS1="\W λ "
 _nc_docker_completion() {
     COMPREPLY=( $( env COMP_WORDS="${COMP_WORDS[*]}" \
                 COMP_CWORD=$COMP_CWORD \

@@ -23,7 +23,7 @@ alias du="ld; nc-docker up sso assets channel-service rabbitmq mongo mysql artic
 alias minimalist_du="ld; nc-docker up assets analytics-api channel-service --local marketingplatform"
 alias cmpu="cmp; yarn --ignore-engines; node --max_old_space_size=2048 $(which grunt);"
 alias cmp="cd $CMP && ld  && du && yarn start"
-alias cmp2="cd $CMP && ncdu marketingplatform"
+alias cmp2="cd $CMP && ncdu cmp-client"
 alias cmp_light="cd $CMP && ld && minimalist_du && yarn start"
 alias ll="ls -lhaG"
 alias ncdu="ld; nc-docker up"

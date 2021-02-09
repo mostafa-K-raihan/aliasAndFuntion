@@ -9,7 +9,7 @@ alias amendRb="amend && git rb --continue"
 alias amendRbPs="amendRb && git ps"
 alias rbcont="git add . && git ci --no-edit && git rb --continue"
 export NVM_DIR="$HOME/.nvm"
-export CMP="$HOME/Desktop/projects/cmp-client"
+export CMP="$HOME/Desktop/projects/cmp-server"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias celery_worker='celery worker --app assets.worker.app:app --loglevel DEBUG --queue extract_zip_and_update_task'
@@ -23,7 +23,7 @@ alias du="ld; nc-docker up sso assets channel-service rabbitmq mongo mysql artic
 alias minimalist_du="ld; nc-docker up assets analytics-api channel-service --local marketingplatform"
 alias cmpu="cmp; yarn --ignore-engines; node --max_old_space_size=2048 $(which grunt);"
 alias cmp="cd $CMP && ld  && du && yarn start"
-alias cmp2="cd $CMP && ncdu cmp-client"
+alias cmp2="cd $CMP && ncdu cmp-client marketing-work-request"
 alias cmp_light="cd $CMP && ld && minimalist_du && yarn start"
 alias ll="ls -lhaG"
 alias ncdu="ld; nc-docker up"

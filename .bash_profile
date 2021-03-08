@@ -15,7 +15,7 @@ export CMP="$HOME/Desktop/projects/cmp-server"
 alias celery_worker='celery worker --app assets.worker.app:app --loglevel DEBUG --queue extract_zip_and_update_task'
 alias run_script='node --require ts-node/register/transpile-only '
 alias gocmp="cd $CMP; ld;"
-alias restart="gocmp touch server/server.js"
+alias rs="gocmp touch server/server.js"
 alias gocl="gocmp cd ../cmp-client"
 alias goLD="cd $CMP; cd ../localdev; ld;"
 alias updateLDdep="goLD cd nc-docker; sudo pip install -e ."
@@ -126,3 +126,19 @@ _quickRebase() {
 }
 
 alias quickRebase=_quickRebase
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

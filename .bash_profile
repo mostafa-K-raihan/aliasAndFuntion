@@ -36,9 +36,10 @@ alias shell="ld;  nc-docker shell"
 alias lg="ld; nc-docker logs -ft --tail 100"
 alias ncdt="nc-docker test"
 alias tc="ncdt cmp-client contract-test"
-alias tb="ncdt cmp-server server-test"
-alias tf="ncdt cmp-client client-test"
+alias tb="gocmp yarn test"
+alias tf="gocl yarn test"
 alias tl="cd $CMP && ld; yarn run lint --fix"
+alias smp='nc-docker up assets channel-service permissions article-query article-query-record-processors sso sqs marketing-work-request localstack --local cmp-server'
 alias gpm="git checkout master; git pull newscred master"
 alias gco='git checkout'
 alias pro='vi $HOME/.bash_profile'
@@ -89,7 +90,7 @@ alias crbr=_crbr
 _gitPull() {
   cd $CMP && cd ../ 
   for f in *; do  
-    (echo "***************** ${f}" && cd $f && gpm  && cd ../) || (echo "^^^^^^^^^^^^^^^^^^^^ failed ${f}" && cd ../) ;
+    (echo "***************** ${f} *****************" && cd $f && gpm  && cd ../) || (echo "^^^^^^^^^^^^^^^^^^^^ failed ${f} ^^^^^^^^^^^^^^^^^^^" && cd ../) ;
   done  
 }
 
@@ -141,4 +142,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
+import teamWork from '@cmc/common/IMAGES/illustrations/team-work.png';import teamWork from '@cmc/common/IMAGES/illustrations/team-work.png';

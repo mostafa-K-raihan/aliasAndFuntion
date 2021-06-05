@@ -49,7 +49,14 @@ export PATH="$PATH:$HOME/Desktop/flutter/bin"
 alias cleanIndices='nc-docker exec article-query "./ncbuild clean_indices" && cd $CMP && yarn reindex-data'
 alias publishSeed='nc-docker exec analytics-api "/code/docker/run-data-seed.sh"'
 export PATH="$PATH:$HOME/Desktop/mongodb-osx-x86_64-3.6.17/bin"
-export PS1="\W λ "
+# Git branch in prompt.
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\]  λ"
+
 _nc_docker_completion() {
     COMPREPLY=( $( env COMP_WORDS="${COMP_WORDS[*]}" \
                 COMP_CWORD=$COMP_CWORD \
@@ -107,7 +114,7 @@ _spro() {
   echo 'copying done'
   cd ~/Desktop/aliasAndFunction 
   echo 'moved to git folder'
-  git add . && git ci -m "updated at - `date`" && git ps;
+  git add . && git ci -m "$1 - updated at - `date`" && git ps;
   echo "push done"
   echo 'sourcing bash profile'
   source_profile

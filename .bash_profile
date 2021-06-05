@@ -108,9 +108,9 @@ _spro() {
   currentDir=$(pwd)
   source $HOME/.bash_profile
   echo 'Sourcing done'
-  rm -r ~/Desktop/aliasAndFunction/.bash_profile 
-  echo 'removing done'
-  cp ~/.bash_profile ~/Desktop/aliasAndFunction/.bash_profile
+  # rm -r ~/Desktop/aliasAndFunction/.bash_profile 
+  # echo 'removing done'
+  cp -i ~/.bash_profile ~/Desktop/aliasAndFunction/.bash_profile
   echo 'copying done'
   cd ~/Desktop/aliasAndFunction 
   echo 'moved to git folder'

@@ -1,5 +1,5 @@
 
-source `which virtualenvwrapper.sh`
+# source `which virtualenvwrapper.sh`
 source ~/.bashrc
 source ~/.custom.sh
 alias dc="docker"

@@ -110,7 +110,7 @@ _spro() {
   echo 'Sourcing done'
   # rm -r ~/Desktop/aliasAndFunction/.bash_profile 
   # echo 'removing done'
-  cp -i ~/.bash_profile ~/Desktop/aliasAndFunction/.bash_profile
+  cp ~/.bash_profile ~/Desktop/aliasAndFunction/.bash_profile
   echo 'copying done'
   cd ~/Desktop/aliasAndFunction 
   echo 'moved to git folder'

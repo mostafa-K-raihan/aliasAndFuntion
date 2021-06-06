@@ -55,7 +55,7 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-export PS1="\$(parse_git_branch)\[\033[00m\] λ "
+export PS1="\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] λ "
 
 _nc_docker_completion() {
     COMPREPLY=( $( env COMP_WORDS="${COMP_WORDS[*]}" \

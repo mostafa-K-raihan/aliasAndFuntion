@@ -149,4 +149,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-import teamWork from '@cmc/common/IMAGES/illustrations/team-work.png';import teamWork from '@cmc/common/IMAGES/illustrations/team-work.png';

@@ -2,6 +2,7 @@
 # source `which virtualenvwrapper.sh`
 source ~/.bashrc
 source ~/.custom.sh
+alias weather="curl wttr.in/jessore"
 alias dc="docker"
 alias ld="pyenv activate localdev"
 alias amend="git add . && git ci --amend --no-edit"

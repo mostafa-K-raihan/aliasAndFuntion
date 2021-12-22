@@ -43,7 +43,7 @@ alias tl="cd $CMP && ld; yarn run lint --fix"
 alias smp='nc-docker up assets channel-service permissions article-query article-query-record-processors sso sqs marketing-work-request localstack --local cmp-server'
 alias gpm="git checkout master; git pull newscred master"
 alias gco='git checkout'
-alias pro='vi $HOME/.bash_profile'
+alias pro='nvim $HOME/.bash_profile'
 alias source_profile='source $HOME/.bash_profile'
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 export PATH="$PATH:$HOME/Desktop/flutter/bin"

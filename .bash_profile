@@ -106,7 +106,7 @@ alias gitPull=_gitPull
 
 
 _spro() {
-  let $# || { echo No arguments supplied; exit 1; }  # Exit if no arguments!
+  let $# || { echo No arguments supplied; }
   currentDir=$(pwd)
   source $HOME/.bash_profile
   echo 'Sourcing done'

@@ -154,6 +154,10 @@ git-stable-pr() {
   git rebase --onto stable/master $(git merge-base HEAD edge/master) pr/$BR
 }
 
+# for MacOS  sed is not working properly
+# hence installed gnu-sed and aliases to sed
+alias sed=gsed
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"

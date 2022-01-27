@@ -45,13 +45,15 @@ alias gpm="git checkout master && git pull newscred master && git co -"
 alias gco='git checkout'
 alias pro='nvim $HOME/.bash_profile'
 alias source_profile='source $HOME/.bash_profile'
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 export PATH="$PATH:$HOME/Desktop/flutter/bin"
 alias cleanIndices='nc-docker exec article-query "./ncbuild clean_indices" && cd $CMP && yarn reindex-data'
 alias publishSeed='nc-docker exec analytics-api "/code/docker/run-data-seed.sh"'
 export PATH="$PATH:$HOME/Desktop/mongodb-osx-x86_64-3.6.17/bin"
 # Git branch in prompt.
 
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }

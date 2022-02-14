@@ -48,6 +48,7 @@ alias source_profile='source $HOME/.bash_profile'
 export PATH="$PATH:$HOME/Desktop/flutter/bin"
 alias cleanIndices='nc-docker exec article-query "./ncbuild clean_indices" && cd $CMP && yarn reindex-data'
 alias publishSeed='nc-docker exec analytics-api "/code/docker/run-data-seed.sh"'
+alias lintAsset='flake8 assets/ assets_v2/ tests/ scripts/create_tables.py scripts/assets-worker-health-check scripts/integration-test --config=.flake8'
 export PATH="$PATH:$HOME/Desktop/mongodb-osx-x86_64-3.6.17/bin"
 # Git branch in prompt.
 

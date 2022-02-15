@@ -3,6 +3,7 @@
 source ~/.bashrc
 source ~/.custom.sh
 alias weather="curl wttr.in/jessore"
+alias gocode="cd ~/code"
 alias dc="docker"
 alias ld="pyenv activate localdev"
 alias amend="git add . && git ci --amend --no-edit"

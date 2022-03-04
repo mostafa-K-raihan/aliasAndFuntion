@@ -2,6 +2,7 @@
 # source `which virtualenvwrapper.sh`
 source ~/.bashrc
 source ~/.custom.sh
+alias nvinit="cd ~/.config/nvim && nvim init.vim"
 alias weather="curl wttr.in/jessore"
 alias gocode="cd ~/code"
 alias dc="docker"
@@ -21,6 +22,8 @@ alias rs="gocmp touch server/server.js"
 alias gocl="gocmp cd ../cmp-client"
 alias goLD="cd $CMP; cd ../localdev; ld;"
 alias updateLDdep="goLD cd nc-docker; sudo pip install -e ."
+alias rstcp="yarn test --nc-coverage --nc-parallel"
+alias rst="yarn test"
 alias dsk="cd ~/Desktop/";
 alias ncd='gocmp  nc-docker'
 alias du="ld; nc-docker up sso assets channel-service rabbitmq mongo mysql article-query article-query-record-processors sqs permissions --local marketingplatform"
@@ -112,17 +115,17 @@ alias gitPull=_gitPull
 _spro() {
   let $# || { echo No arguments supplied; exit 1;}  # Exit if no arguments!
   currentDir=$(pwd)
-  source $HOME/.bash_profile
-  echo 'Sourcing done'
-  cp ~/.bash_profile ~/Desktop/aliasAndFunction/.bash_profile
-  echo 'copying done'
-  cd ~/Desktop/aliasAndFunction 
-  echo 'moved to git folder'
-  git add . && git ci -m "$1 - updated at - `date`" && git ps;
-  echo "push done"
-  echo 'sourcing bash profile'
-  source_profile
-  echo 'moving to current directory'
+  source $HOME/.bash_profile &&
+  echo 'Sourcing done' &&
+  cp ~/.bash_profile ~/Desktop/aliasAndFuntion/.bash_profile &&
+  echo 'copying done' &&
+  cd ~/Desktop/aliasAndFuntion &&
+  echo 'moved to git folder' &&
+  git add . && git ci -m "$1 - updated at - `date`" && git ps &&
+  echo "push done" &&
+  echo 'sourcing bash profile' &&
+  source_profile &&
+  echo 'moving to current directory' &&
   cd $currentDir
 }
 
@@ -176,3 +179,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+. "$HOME/.cargo/env"
